@@ -11,17 +11,30 @@ namespace Model
     [XmlRoot("Citizen")]
     public class DKcitizen
     {
-        string firstName { get; set; }
-        string surName { get; set; }
-        string cprNr { get; set; }
-        string Adress1 { get; set; }
-        string Adress2 { get; set; }
-        string postalCode { get; set; }
-        string city { get; set; }
-        string maritalStatus { get; set; }
-        string spouseCPR { get; set; }
-        List<string> childrenCPR { get; set; }
-        List<string> parentsCPR { get; set; }
-        string doctorCVR { get; set; }
+        public DKcitizen() { }
+        [XmlElement]
+        public string firstName { get; set; }
+        [XmlElement]
+        public string surName { get; set; }
+        [XmlElement]
+        public string cprNr { get; set; }
+        [XmlElement]
+        public string Adress1 { get; set; }
+        [XmlElement]
+        public string Adress2 { get; set; }
+        [XmlElement]
+        public string postalCode { get; set; }
+        [XmlElement]
+        public string city { get; set; }
+        [XmlElement]
+        public string maritalStatus { get; set; } = "Unmarried";
+        [XmlElement]
+        public string spouseCPR { get; set; }
+        [XmlElement]
+        public List<string> childrenCPR { get; set; }
+        [XmlElement]
+        public List<string> parentsCPR { get; set; }
+        [XmlElement]
+        public string doctorCVR { get; set; }
     }
 }
